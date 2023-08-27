@@ -59,7 +59,7 @@
     z-index: 4;
     height: 240px;
     top: 0;
-    transform: translate(350px ,150px);
+    transform: translate(250px ,150px);
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -89,7 +89,7 @@
  z-index: 3;
  top: 0;
  left: 0;
- transform: translate(450px,420px);
+ transform: translate(300px,420px);
  box-shadow: 10px 2px 20px rgba(211, 211, 211, 0.549);
  color: white;
   }
