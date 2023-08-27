@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+      font-family: 'Space Grotesk', sans-serif;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .mob {
+    display: none;
+  }
+  .right {
+    width: 40%;
+  }
+  .right img {
+    width: 100%;
+    height: 100vh;
+  }
+  @media (max-width:400px){
+    main {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .right {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .right img {
+        width: 100%;
+        height: 100%;
+    }
+    .mob {
+        display: block;
+    }
+    .desc {
+        display: none;
+    }
+  }
+  .cards {
+    position: absolute;
+  }
+  .front {
+    background-image: url(./images/bg-card-front.png);
+    width: 450px;
+    position: absolute;
+    z-index: 4;
+    height: 240px;
+    top: 0;
+    transform: translate(350px ,150px);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+  }
+  .front img {
+    width: 70px;
+  }
+  .front > p {
+    margin-top: 90px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  .front .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .back {
+ background-image: url(./images/bg-card-back.png);
+ width: 450px;
+ position: absolute;
+ height: 240px;
+ z-index: 3;
+ top: 0;
+ left: 0;
+ transform: translate(450px,420px);
+ box-shadow: 10px 2px 20px rgba(211, 211, 211, 0.549);
+ color: white;
+  }
+  .back p {
+    position: absolute;
+    right: 60px;
+    top: 110px;
+  }
+  @media (max-width:400px){
+    .front {
+        transform: translate(20px,125px);
+        width: 270px;
+        height: 150px;
+        background-size: cover;
+    }
+    .front > p {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+    .back {
+        right: 0;
+        top: 0;
+        transform: translate(100px,40px);
+        width: 270px;
+        height: 150px;
+        background-size: cover;
+        box-shadow: none;
+
+    }
+    .back p {
+        top: 65px;
+        right: 30px;
+    }
+  }
+  .left {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.card-name , .card-num {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.card-name p , .card-num p {
+    color: hsl(0, 100%, 66%);
+}
+input {
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    outline:none;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+}
+input:focus {
+    border:3px solid;
+border-radius: 10px;
+border-image:  linear-gradient(360deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
+}
+.last {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+.last .inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+label {
+    color:hsl(278, 68%, 11%);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.date {
+    width: 50%;
+}
+.date p {
+    color: hsl(0, 100%, 66%);;
+}
+.date label {
+    margin-bottom: 10px;
+}
+.inputs input {
+    width: 100px;
+    margin-right: 10px;
+    width: 40%;
+}
+.cvc {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.cvc input {
+width: 100%;
+margin-left: 2px;
+}
+.cvc p {
+    color: hsl(0, 100%, 66%);;
+}
+.btn {
+    width: 100%;
+    height: 50px;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+   border-radius: 10px;
+   font-weight: bold;
+   text-align: center;
+   padding-top: 15px;
+}
+@media (max-width:400px) {
+    .left {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+        margin-top: 100px;
+        padding: 30px;
+    }
+}
+form {
+    width: 400px;
+    display: block;
+}
+.complete {
+    display: none;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.complete img {
+    margin-bottom: 10px;
+}
+.complete h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.complete p {
+    margin-bottom: 40px;
+}
